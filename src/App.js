@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import "./App.css";
-import apod from "./apod";
 import Header from "./Header"
 import Footer from "./Footer"
-import MainContent from "./MainContent"
 
+
+const MainContent2 = (props) => {
+  return(
+  <div className='img container'>
+      <img src={props.url}/>
+  </div>
+  )
+}
 
 function App() {
 
@@ -13,34 +19,34 @@ function App() {
 
   useEffect(() => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=jUbFwgIEb3r57xPtKB0pD9EKbukgWhNodtPNnEb2")
-    .then(res => {
-      console.log(res.data)
-      setNasaData(res.data)
-      //ayeee
-      
-    })
-    .catch(err => (
-      console.log('error')
-    ))
+      .then(res => {
+        console.log(res.data)
+        setNasaData(res.data)
+        //ayeee
+
+      })
+      .catch(err => (
+        console.log('error')
+      ))
   }, [])
 
   return (
     <div className="App">
-       {
-     nasaData && <Header  title={nasaData.title}/>
-     }
-     
-     {nasaData && <MainContent url={nasaData.url} />}
-    
-    
-     {nasaData && <Footer copyright={nasaData.copyright} date={nasaData.date} exp={nasaData.explanation}/>}
-    
+      {
+        nasaData && <Header title={nasaData.title} />
+      }
+
+      {nasaData && <MainContent2 url={nasaData.url} />}
+
+
+      {nasaData && <Footer copyright={nasaData.copyright} date={nasaData.date} exp={nasaData.explanation} />}
+
 
 
     </div>
 
 
-     
+
   );
 }
 
