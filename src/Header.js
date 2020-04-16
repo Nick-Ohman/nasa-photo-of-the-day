@@ -1,17 +1,16 @@
 import React from 'react';
 
 
-
-const Header = (props) => {
+const Header = (props) => { // props from App.js
 
 
 
     return (
         <header className='header'>
             <div className='title'>
-                <h1>Nasa Photo Of The Day!</h1>
+                <h1>NASA POTD!</h1>
                 <h2>{props.title}</h2>
-                <h2>{props.copyright}</h2>
+                
             </div>
         </header>
 

@@ -3,6 +3,7 @@ import axios from 'axios'
 import "./App.css";
 import apod from "./apod";
 import Header from "./Header"
+import Footer from "./Footer"
 
 
 function App() {
@@ -25,13 +26,20 @@ function App() {
   return (
     <div className="App">
        {
-     nasaData && <Header copyright={nasaData.copyright} title={nasaData.title}/>
+     nasaData && <Header  title={nasaData.title}/>
      }
      
-     {
-     nasaData && <img src={nasaData.url} />
-     }
+     {nasaData && <img src={nasaData.url} />}
+    
+    
+     {nasaData && <Footer copyright={nasaData.copyright} date={nasaData.date} exp={nasaData.explanation}/>}
+    
+
+
     </div>
+
+
+     
   );
 }
 
