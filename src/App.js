@@ -7,7 +7,7 @@ import Footer from "./Footer"
 
 const MainContent2 = (props) => {
   return(
-  <div className='img container'>
+  <div className='imgcontainer'>
       <img src={props.url}/>
   </div>
   )
@@ -33,13 +33,13 @@ function App() {
   return (
     <div className="App">
       {
-        nasaData && <Header title={nasaData.title} />
+        nasaData && <Header  />
       }
 
       {nasaData && <MainContent2 url={nasaData.url} />}
 
 
-      {nasaData && <Footer copyright={nasaData.copyright} date={nasaData.date} exp={nasaData.explanation} />}
+      {nasaData && <Footer title={nasaData.title} copyright={nasaData.copyright} date={nasaData.date} exp={nasaData.explanation} />}
 
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from './Container'
 
 
 const Footer = (props) => {/// props from App.js
@@ -6,11 +7,12 @@ const Footer = (props) => {/// props from App.js
 
     return (
         <footer className='footer'>
-            <div className='title'>
+            <Container>
+            <h2>{props.title}</h2>
                 <p>{props.exp}</p>
                 <p>{props.date}</p>
                 <p>{props.copyright}</p>
-            </div>
+            </Container>
         </footer>
     );
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import NasaLogo from './imgs/nasaLogo.jpeg'
+import Container from './Container'
 
 const Header = (props) => { // props from App.js
 
@@ -7,13 +8,13 @@ const Header = (props) => { // props from App.js
 
     return (
         <header className='header'>
-            <div className='title'>
+            <Container>
                 <img src={NasaLogo} alt="nasa logo"/>
                 <h1>POTD!</h1>
-                <h2>{props.title}</h2>
                 
                 
-            </div>
+                
+            </Container>
         </header>
 
 
