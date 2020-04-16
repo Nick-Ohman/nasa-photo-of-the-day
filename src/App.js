@@ -4,6 +4,7 @@ import "./App.css";
 import apod from "./apod";
 import Header from "./Header"
 import Footer from "./Footer"
+import MainContent from './MainContent'
 
 
 function App() {
