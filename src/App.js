@@ -4,6 +4,7 @@ import "./App.css";
 import apod from "./apod";
 import Header from "./Header"
 import Footer from "./Footer"
+import MainContent from "./MainContent"
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
      nasaData && <Header  title={nasaData.title}/>
      }
      
-     {nasaData && <img src={nasaData.url} />}
+     {nasaData && <MainContent url={nasaData.url} />}
     
     
      {nasaData && <Footer copyright={nasaData.copyright} date={nasaData.date} exp={nasaData.explanation}/>}
