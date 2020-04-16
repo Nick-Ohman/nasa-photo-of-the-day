@@ -16,7 +16,7 @@ function App() {
     .then(res => {
       console.log(res.data)
       setNasaData(res.data)
-      
+      //ayeee
       
     })
     .catch(err => (
