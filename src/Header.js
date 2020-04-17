@@ -9,7 +9,9 @@ const Header = (props) => { // props from App.js
     return (
         <header className='header'>
             <Container>
+                <div className='img'>
                 <img src={NasaLogo} alt="nasa logo"/>
+                </div>
                 <h1>POTD!</h1>
                 
                 

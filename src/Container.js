@@ -7,6 +7,8 @@ border: 1px solid rgb(210, 210, 210);
   padding: 12px;
   background-color: white;
   width: 100%;
+  display:flex;
+  flex-direction:column;
   
  
 
